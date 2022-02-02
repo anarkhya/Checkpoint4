@@ -6,8 +6,14 @@ const Header = () => {
   return (
     <div className="header">
       <Logo />
-      <Link to="/Home">Home</Link>
-      <Link to="/ItemList">Item List</Link>
+      <div className="header-links">
+        <Link to="/Home">
+          <p>Home</p>
+        </Link>
+        <Link to="/ItemList">
+          <p>Item List</p>
+        </Link>
+      </div>
     </div>
   );
 };
