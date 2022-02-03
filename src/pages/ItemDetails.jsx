@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Header from '../components/Header';
-import Item from '../components/Item';
+// import Item from '../components/Item';
 
-const ItemDetails = ({ data }) => {
+const ItemDetails = () => {
   return (
     <div>
       <Header />
       details of item
-      <Item key={data.id} data={data} />
     </div>
   );
 };
