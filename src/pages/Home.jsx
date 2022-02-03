@@ -1,16 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Header from '../components/Header';
 
-const Home = () => {
+const Home = ({ titleh1, titleh2 }) => {
   return (
     <div className="home">
       <Header />
       <section className="welcome">
         <img src="../images/hero.jpg" alt="two astronauts on Mars" />
-        <h1>This was IT</h1>
+        <h1>{titleh1}</h1>
       </section>
       <section className="about">
-        <h2>What was IT, really ?</h2>
+        <h2>{titleh2}</h2>
         <p>
           In the allegory, Socrates describes a group of people who have lived
           chained to the wall of a cave all their lives, facing a blank wall.

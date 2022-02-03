@@ -42,9 +42,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 120pt;
+  color: white;
+  text-shadow: 0  0 5px #724337;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-top: 20px;
+  letter-spacing: -0.7rem;
+  line-height: 0.7;
+}
+
 .header {
   display: flex;
-  font-size: 20pt;
   background-color: #222;
   margin-bottom: 4px;
   width: 100vw;
@@ -81,17 +91,6 @@ body {
   box-shadow: 0 4px 200px 0 rgba(185, 108, 44, 0.6);
 }
 
-.welcome h1 {
-  text-align: center;
-  font-size: 120pt;
-  color: white;
-  text-shadow: 0  0 5px #724337;
-  font-family: 'Roboto Condensed', sans-serif;
-  padding-top: 20px;
-  letter-spacing: -0.7rem;
-  line-height: 0.7;
-}
-
 .about {
   display: flex;
   flex-direction: column;
@@ -99,6 +98,7 @@ body {
   padding: 2em;
   text-align: left;
   width: 50vw;
+  min-width: 500px;
   max-width: 670px;
   text-shadow: 0 0 5px rgb(196, 158, 127);
 }
@@ -125,13 +125,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-}
-
-.card img {
-  height: 60%;
-  width: 100%;
-  object-fit: cover;
+  gap: 20px;
+  padding-bottom: 30px;
 }
 
 .card {
@@ -142,9 +137,19 @@ body {
   border-radius: 10px;
   height: 300px;
   width: 300px;
-  background-color: #222;
+  background-color: rgb(34, 34, 34);
   color: #ddd;
   transition: 0.3s;
+}
+
+.card img {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  width: 100%;
 }
 
 .card:hover {
@@ -157,16 +162,25 @@ body {
 /*********************** MOBILE ************************/
 
 @media screen and (max-width: 400px) {
-  .welcome img {
-    height: 40vh;
-  }
-
-  .welcome h1 {
+  h1 {
     font-size: 50pt;
     letter-spacing: 0;
   }
 
+  .header-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 20px 0 0;
+    font-size: 14pt;
+  }
+
+  .welcome img {
+    height: 40vh;
+  }
+
   .about {
+    min-width: 100vw;
     width: 100vw;
   }
 
