@@ -1,17 +1,25 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Item from './Item';
-import ItemData from '../data/ItemData';
+// import ItemData from '../data/ItemData';
 
 const ItemContainer = () => {
+  const [itemData, setItemData] = useState([]);
+
+  useEffect(() => {
+    axios.get('./data/itemData.json').then((res) => {
+      setItemData(res.data);
+    });
+  }, []);
+
   return (
     <div>
       <div className="card-container-header">
-        <h1>Colors</h1>
-        <button type="button">button</button>
+        <h1>Coloured Floppies</h1>
       </div>
       <div className="card-container">
-        {ItemData.map((data) => (
+        {itemData.map((data) => (
           <Item key={data.id} data={data} />
         ))}
       </div>

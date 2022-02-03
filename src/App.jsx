@@ -9,12 +9,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/itemList" element={<ItemList />} />
-        <Route exact path="/itemDetails" element={<ItemDetails />} />
+        <Route exact path="/itemList/:id" element={<ItemDetails />} />
         <Route
           exact
           path="/home"
           element={
-            <Home titleh1="This was IT" titleh2="What was IT, really ?" />
+            <Home
+              titleh1="This is Floppizer"
+              titleh2="What is Floppizer, really ?"
+            />
           }
         />
         <Route path="/" element={<Home />} />

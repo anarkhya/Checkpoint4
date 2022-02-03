@@ -7,7 +7,7 @@ const Home = ({ titleh1, titleh2 }) => {
     <div className="home">
       <Header />
       <section className="welcome">
-        <img src="../images/hero.jpg" alt="two astronauts on Mars" />
+        <img src="../images/hero.webp" alt="two astronauts on Mars" />
         <h1>{titleh1}</h1>
       </section>
       <section className="about">
