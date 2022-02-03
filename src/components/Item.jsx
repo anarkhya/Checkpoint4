@@ -9,8 +9,8 @@ const Item = ({ data }) => {
       <img src={data.src} alt={data.alt} />
       <h2>{data.title}</h2>
       <p>{data.description}</p>
-      <Link to="/ItemDetails">
-        <button type="button">view more</button>
+      <Link to={`/ItemList/${data.id}`}>
+        <button type="button">more</button>
       </Link>
     </div>
   );
